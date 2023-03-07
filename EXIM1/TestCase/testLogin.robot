@@ -20,7 +20,10 @@ My2ndTest
     Remove Tags    regression1
     
 My3rdTest
-    Log            3rd Test   
+    Log            3rd Test
+    
+My4thTest
+    Log            4th Test   
     
 # loginTest
     # [Documentation]         This is a sample login test
@@ -94,6 +97,7 @@ My3rdTest
 # Step 3 Clone a Git repository
 # Step 4 right click on project > Team > Share Project
 # Step 5 Add to git >> right click on project > Team > Commit
+# Step 6 When have update code >> right click on project > Team > Commit
 
 
 
