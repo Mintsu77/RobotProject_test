@@ -25,35 +25,35 @@ My3rdTest
 My4thTest
     Log            4th Test   
     
-# loginTest
-    # [Documentation]         This is a sample login test
-    # Open Browser            ${URL}         chrome
-    # LoginKW
-    # Sleep                   2 
-    # Click Button            id=btnClickMenu
-    # Sleep                   2 
-    # Click Element           xpath=//*[@id="myDropdown"]/a
-    # Sleep                   2         
-    # Log                     Login Test Completed!!
-    # Log                     This test was executed by %{username} on %{os}
+loginTest
+    [Documentation]         This is a sample login test
+    Open Browser            ${URL}         chrome
+    LoginKW
+    Sleep                   2 
+    Click Button            id=btnClickMenu
+    Sleep                   2 
+    Click Element           xpath=//*[@id="myDropdown"]/a
+    Sleep                   2         
+    Log                     Login Test Completed!!
+    Log                     This test was executed by %{username} on %{os}
     
-# *** Variables ***
-# #SCALAR Variables
-# ${URL}            https://exim1staffuat.exim.go.th/app/Account/Login      
+*** Variables ***
+#SCALAR Variables
+${URL}            https://exim1staffuat.exim.go.th/app/Account/Login      
 
-# #LIST Variables
-# @{CREDENTIALS}    yuwareek  bank@2021
+#LIST Variables
+@{CREDENTIALS}    yuwareek  bank@2021
 
-# #DICTIONARY
-# &{LOGINDATA}      userName=yuwareek    password=bank@2021
+#DICTIONARY
+&{LOGINDATA}      userName=yuwareek    password=bank@2021
 
-# *** Keywords ***
-# LoginKW
-    # Input Text                   id=userName    @{CREDENTIALS}[0]
-    # Sleep                        2      
-    # Input Text                   id=password    &{LOGINDATA}[password]
-    # Sleep                        2  
-    # Click Button                 id=btn_login
+*** Keywords ***
+LoginKW
+    Input Text                   id=userName    @{CREDENTIALS}[0]
+    Sleep                        2      
+    Input Text                   id=password    &{LOGINDATA}[password]
+    Sleep                        2  
+    Click Button                 id=btn_login
     
 #===============================================================
 # How to Set Tags From cmd
@@ -98,6 +98,16 @@ My4thTest
 # Step 4 right click on project > Team > Share Project
 # Step 5 Add to git >> right click on project > Team > Commit
 # Step 6 When have update code >> right click on project > Team > Commit
+
+# How to run Robot test from JENKINS
+# Step 1 Start & Setup Jenkins
+#            >> Open cmd
+#            >> cd to Jenkins location
+#            >> java -jar jenkins.war
+#            >> java -jar jenkins.war --httpPort=xxxx
+# Step 2 Add Pplugins and start
+# Step 3 Create a new item
+# Step 4 Add command
 
 
 
